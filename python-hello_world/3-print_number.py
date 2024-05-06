@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
 number = 98
-print("98 Battery Street")
+print("%s Battery Street" % number)
