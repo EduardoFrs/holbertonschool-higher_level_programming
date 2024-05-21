@@ -11,16 +11,8 @@ def text_indentation(text):
 
     result = ''
     for char in text:
-        if result == '':
-            if char == ' ':
-                continue
-            else:
-                result = char
-        else:
-            if char in ".?:":
-                print(result + '\n\n')
-            else:
-                print(result, end='')
-            result = char
-    if result != '':
-        print(result, end='')
+        result += char
+        if char in ".?:":
+            result += '\n\n'
+
+    print(result, end='')
