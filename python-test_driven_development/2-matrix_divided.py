@@ -25,5 +25,5 @@ def matrix_divided(matrix, div):
         ("matrix must be a matrix (list of lists) of integers/floats")
         if len(row) != row_length:
             raise TypeError("Each row of the matrix must have the same size")
-    new_matrix = [[round(element/div, 2) for element in row] for row in matrix]
+    new_matrix = [[round(element / div, 2) for element in row] for row in matrix]
     return new_matrix
