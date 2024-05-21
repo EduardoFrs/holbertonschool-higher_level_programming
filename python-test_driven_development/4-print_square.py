@@ -4,7 +4,7 @@
 
 def print_square(size):
     """
-    print square
+    print square of size 'size'
     """
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
