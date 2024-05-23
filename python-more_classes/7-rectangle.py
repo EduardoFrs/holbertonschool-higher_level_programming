@@ -92,7 +92,7 @@ class Rectangle:
 
         rect_lines = []
         for i in range(self.__height):
-            rect_lines.append("#" * self.__width)
+            rect_lines.append(str(self.print_symbol) * self.__width)
         return "\n".join(rect_lines)
 
     def __repr__(self):
