@@ -1,3 +1,5 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
 >>> bg = BaseGeometry()
 
 >>> # Test area method, should raise an exception
