@@ -29,7 +29,7 @@ def show_username(username):
     return jsonify(users[username])
 
 
-@app.route("/add_users", methods=['POST'])
+@app.route("/add_user", methods=['POST'])
 def add_user():
     data = request.get_json()
     username = data['username']
