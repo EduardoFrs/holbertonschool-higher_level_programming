@@ -5,13 +5,15 @@ import json
 HOSTNAME = "localhost"
 PORT = 8000
 
+
 class Server(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/":
             self.send_response(200)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write(bytes("Hello, this is a simple API!", encoding='utf-8'))
+            self.wfile.write(bytes(
+                "Hello, this is a simple API!", encoding='utf-8'))
 
         elif self.path == "/data":
             self.send_response(200)
@@ -36,8 +38,6 @@ class Server(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(bytes("Endpoint not found", encoding='utf-8'))
 
-    def log_message(self, format, *args):
-        return
 
 if __name__ == "__main__":
     server = HTTPServer((HOSTNAME, PORT), Server)
