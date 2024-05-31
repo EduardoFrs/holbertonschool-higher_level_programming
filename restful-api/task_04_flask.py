@@ -28,5 +28,16 @@ def show_username(username):
     return jsonify(users[username])
 
 
+@app.route("/add_users", methods=['POST'])
+def add_user():
+    data = request.get_json()
+    username = data['username']
+    users[username] = data
+    return jsonify({
+        "message": "User added",
+        "user": data
+    }), 201
+
+
 if __name__ == "__main__":
     app.run(port=5000)
