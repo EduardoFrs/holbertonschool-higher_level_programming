@@ -29,5 +29,4 @@ class CustomObject:
             with open(filename, 'rb') as f:
                 return pickle.load(f)
         except (IOError, pickle.UnpicklingError):
-            print("Error: File could not be opened or contains invalid data")
             return None
