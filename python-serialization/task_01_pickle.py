@@ -12,21 +12,21 @@ class CustomObject:
         self.is_student = is_student
 
     def display(self):
-        print("Name:", self.name)
-        print("Age:", self.age)
-        print("Is Student:", self.is_student)
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"Is Student: {self.is_student}")
 
     def serialize(self, filename):
         try:
             with open(filename, 'wb') as f:
                 pickle.dump(self, f)
-        except IOError:
-            print("Error: File could not be opened or written")
+        except Exception as e:
+            return None
 
     @classmethod
     def deserialize(cls, filename):
         try:
             with open(filename, 'rb') as f:
                 return pickle.load(f)
-        except (IOError, pickle.UnpicklingError):
+        except Exception as e:
             return None
