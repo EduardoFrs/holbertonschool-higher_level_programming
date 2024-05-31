@@ -10,7 +10,6 @@ class Server(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/":
             self.send_response(200)
-            self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(bytes(
                 "Hello, this is a simple API!", encoding='utf-8'))
@@ -34,7 +33,6 @@ class Server(BaseHTTPRequestHandler):
 
         else:
             self.send_response(404)
-            self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(bytes("Endpoint not found", encoding='utf-8'))
 
