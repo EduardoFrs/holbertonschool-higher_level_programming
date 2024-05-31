@@ -2,6 +2,7 @@
 from flask import Flask
 from flask import jsonify
 from flask import request
+import json
 
 
 app = Flask(__name__)
@@ -40,4 +41,4 @@ def add_user():
 
 
 if __name__ == "__main__":
-    app.run(port=5000)
+    app.run()
