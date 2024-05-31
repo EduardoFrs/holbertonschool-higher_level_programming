@@ -42,9 +42,4 @@ class Server(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     server = HTTPServer((HOSTNAME, PORT), Server)
     print(f'Server started at port {PORT}...')
-    try:
-        server.serve_forever()
-    except KeyboardInterrupt:
-        pass
-    server.server_close()
-    print("Server stopped.")
+    server.serve_forever()
