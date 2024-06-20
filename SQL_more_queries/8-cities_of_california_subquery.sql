@@ -1,2 +1,3 @@
 -- 8.Cities of California
-SELECT cities FROM California ORDER BY cities.id ASC
+SELECT cities.id, cities.name FROM cities, states
+WHERE states.name = 'California' ORDER BY cities.id ASC
