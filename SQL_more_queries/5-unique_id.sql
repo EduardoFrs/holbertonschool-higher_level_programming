@@ -1,2 +1,2 @@
 -- 5. Unique ID
-CREATE TABLE unique_id (id INT UNIQ (1), name VARCHAR(256));
+CREATE TABLE unique_id (id INT UNIQUE (1), name VARCHAR(256));
