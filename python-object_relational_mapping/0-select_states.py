@@ -5,6 +5,7 @@
 import sys
 import MySQLdb
 
+
 def list_states(username, password, dbname):
     db = MySQLdb.connect(
         host="localhost",
@@ -25,6 +26,7 @@ def list_states(username, password, dbname):
 
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     if len(sys.argv) == 4:
