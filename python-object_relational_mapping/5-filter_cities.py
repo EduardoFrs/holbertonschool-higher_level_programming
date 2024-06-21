@@ -23,8 +23,7 @@ if __name__ == "__main__":
                 ORDER BY cities.id ASC".format(sys.argv[4]))
     rows = cursor.fetchall()
 
-    for row in rows:
-        print(row)
+    print(", ".join([row[1] for row in rows]))
 
     cursor.close()
     db.close()
